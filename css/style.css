@@ -1,0 +1,95 @@
+.box {
+    width: 350px;
+    height: 450px;
+    border: 20px solid orange;
+    position: relative;
+    transition: 1s all;
+    background-image: url(../img/tajmahal-818317_1920.jpg);
+    background-position: 50% 64%;
+    background-size: 300%;
+    background-repeat: no-repeat;
+}
+
+.box::after {
+    border-left: 0;
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: -20px;
+    left: -80%;
+    width: 80%;
+    height: 450px;
+    border: 20px solid orange;
+    transform: skewY(-25deg) rotateY(-90deg);
+    transform-origin: right;
+    /* box-shadow: inset -7px 0px 20px #333; */
+    transition: 1s all;
+    background-image: url(../img/tajmahal-818317_1920.jpg);
+    background-position: 14% 64%;
+    background-size: 400%;
+    background-repeat: no-repeat;
+}
+
+.box:hover {
+    border-left: none;
+    border-right: none;
+    transition: 1s all;
+     transform: skewY(5deg); 
+}
+
+.box:hover:after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: -20px;
+    left: -80%;
+    /* border-right: 0; */
+    width: 80%;
+    height: 450px;
+    border: 20px solid orange;
+    border-right: 0;
+    transform: skewY(-25deg) rotateY(0deg);
+    /* transform-origin: right; */
+    box-shadow: inset -4px 0px 20px #999;
+    transition: 1s all;
+    background-image: url(../img/tajmahal-818317_1920.jpg);
+    background-position: 11% 64%;
+    background-size: 400%;
+    background-repeat: no-repeat;
+}
+
+.box::before {
+    transition: 1s all;
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: -20px;
+    right: -80%;
+    width: 80%;
+    height: 450px;
+    border: 20px solid orange;
+    transform: skewY(-25deg) rotateY(90deg);
+    transform-origin: left;
+    /* box-shadow: inset 7px 0px 20px #333; */
+    background-image: url(../img/tajmahal-818317_1920.jpg);
+    background-position: 89% 64%;
+    background-size: 400%;
+    background-repeat: no-repeat;
+}
+
+.box:hover:before {
+    transition: 1s all;
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: -20px;
+    right: -80%;
+    width: 80%;
+    height: 450px;
+    border: 20px solid orange;
+    transform: skewY(-25deg) rotateY(0deg);
+    border-left: 0;
+    transform-origin: left;
+    /* box-shadow: inset 7px 0px 20px #333; */
+    box-shadow: inset 4px 0px 20px #999;
+}
